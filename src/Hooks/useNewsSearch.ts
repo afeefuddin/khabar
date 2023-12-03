@@ -20,14 +20,16 @@ export default function useNewsSearch(page:number,query: string){
     
 // }
 
-
+    useEffect(()=>{
+        setNews([])
+    },[query])
 
     const[hasMore,  setHasMore] = useState(false);
     useEffect(()=>{
         setLoading(true);
         setError(false);
        let params = {}
-        if(query!=='Choose Specific topic'){
+        if(query!==''){
              params = {
                 'country' : 'in',
                 'category' : query,

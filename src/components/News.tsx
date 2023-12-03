@@ -18,7 +18,7 @@ function News(props : IProps) {
   return (
     <div >
         <div className='flex flex-col rounded w-72 lg:w-96 bg-neutral-300 mt-4 mb-4'>
-            <div className='h-60'>< img src={props.items.urlToImage} className='h-60 w-auto rounded' alt="" /></div>
+            <div className='h-60 m-auto'>< img src={props.items.urlToImage} className='h-60 w-auto rounded' alt="" /></div>
             <div className='flex flex-col text-left p-5'>
                 <div className='font-bold text-lg text-left'>{props.items.title}</div>
                 <div>{props.items.description}</div>
